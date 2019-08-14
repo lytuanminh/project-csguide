@@ -14,15 +14,6 @@ dust2.addEventListener('click', () => {
 
 let d2Smoke = document.getElementById('d2smoke');
 
-// d2Smoke.addEventListener('click', () => {
-//     let divVideo = document.getElementById('vid-container');
-//     let videos = `
-//     <video width="320" height="240" controls>
-//         <source src="https://giant.gfycat.com/FlamboyantIllfatedKitten.mp4" type="video/mp4">
-//     </video>
-//     `
-//     divVideo.innerHTML += videos;
-// })
 
 function videos(){
     let divVideo = document.getElementById('vid-container');
