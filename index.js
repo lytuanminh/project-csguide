@@ -11,3 +11,4 @@ let vertigo = document.getElementById('vertigo');
 console.dir(pageContainer)
 
 
+// let clickToHome = document.getElementById('btn-home');

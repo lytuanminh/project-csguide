@@ -1,17 +1,24 @@
 
-body, html{
+body, html {
     margin:0;
     height: 100%;
-    
+    width: 100%;
 }
+
+html {
+    background-color: rgb(195,195,195);
+}
+
 /* chứa content */
-#container{
+#container {
+    z-index: 1;
     width: 100%;
     margin:0;
     height: 40px;
     text-align: center;
     font-size: 16px;
     padding-top: 15px;
+    font-family: Arial;
 }
 /* thanh utility */
 #container a {
@@ -21,7 +28,7 @@ body, html{
 }
 /* hiệu ứng hover */
 #container a:hover {
-    color: black;
+    color: gray;
 }
 
 /* navigation bar */
@@ -41,6 +48,10 @@ body, html{
     padding: 23px 30px;
     text-decoration: none;
   }
+
+  .navbar a:hover{
+      color: gray;
+  }
   
   /* Dropdown button */
 .dropdown .dropbtn {
@@ -52,6 +63,7 @@ body, html{
     background-color: inherit;
     font-family: inherit; 
     margin: 0; 
+    
 }
 
 /* thanh dropdown */
@@ -65,8 +77,9 @@ body, html{
     position: absolute;
     display: none;
     background-color:gray;
-    min-width: 160px;
-    z-index: 1;
+    min-width: 150px;
+    z-index: 9999;
+    
 }
 /*  */
 .dropdown-content a {
@@ -75,28 +88,193 @@ body, html{
     padding: 15px 15px;
     text-decoration: none;
     display: flex;
-    text-align: left;
+    align-items: center;
+    height: 30px;
+    
 }
 /* hiệu ứng hover của dropdown */
 .dropdown-content a:hover {
     background-color: lightgray;
+    color: black;
 }
 /* hiển thị dropdown content khi hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    animation: display 0.5s forwards;
 }
 /* hiệu ứng chuột */
 .dropbtn:hover {
     cursor: pointer;
+    color:gray;
 }
 /* căn chỉnh dropbtn */
 .dropbtn{
     position: relative;
     top:0px;
 }
+
+.dropdown .dropdown-content a:hover{
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes display{
+    0%{
+        height:0px;
+        }
+    100%{
+        height:480px;
+        }
+    }
+
+
 /* chứa video */
-#vid-container{
-    width: 100%;
+#vid-container {
+    width: auto;
     height: 100%;
     position: absolute;
+    /* margin-left: 90px; */
+    text-align: center;
 }
+
+/* video panel */
+#video-panel {
+    display: inline-block;
+    width: 320px;
+    height: 280px;
+    margin-right: 10px;
+    text-align: center;
+    border-style: ridge;
+    margin-top: 10px;    
+    background-color: rgb(220,220,220);
+}
+
+/* ten video */
+#video-description {
+    display: inline;
+    font-family: Arial;
+}
+
+/* .ico{
+    width:1000px;
+    display:block;
+    height:20px;
+    background:gray;
+    color:white;
+    text-decoration:none;
+    padding-left:20px;
+} */
+
+.icoDust2:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/8/87/Csgo-collectible-pin-dust2.png/revision/latest?cb=20150228183341&format=original');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -5px;
+}
+
+.icoMirage:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/9/96/Set_mirage.png/revision/latest?cb=20140911213903');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
+.icoCache:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/2/23/Set_cache.png/revision/latest?cb=20140911213625');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -10px;
+}
+
+.icoInfer:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/9/99/Set_inferno_2.png/revision/latest?cb=20180904204309');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
+.icoOver:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/d/d9/Set_overpass.png/revision/latest?cb=20140911214002');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
+.icoTrain:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/6/60/Set_train.png/revision/latest?cb=20140911214044');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
+.icoNuke:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/e/ef/Set_nuke.png/revision/latest?cb=20140911213923');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
+.icoVertigo:before {
+    content: '';
+    background:url('https://vignette.wikia.nocookie.net/cswikia/images/d/d7/Set_vertigo.png/revision/latest?cb=20140911214059');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    width:40px;
+    height:40px;
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+}
+
